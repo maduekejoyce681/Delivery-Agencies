@@ -489,6 +489,20 @@ cursor: pointer;
         margin-bottom: 15px;
     }
 
+    .section-heading {
+        text-align: center;
+    }
+
+    .about-textbox {
+        padding: 0px;
+        text-align: center;
+    }
+
+    .why-choose-us-para1, 
+    .why-choose-us-para2 {
+       text-align: center;
+    }
+
    
 }
 
