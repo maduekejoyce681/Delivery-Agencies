@@ -1,0 +1,544 @@
+/*Global Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Roboto, sans-serif;
+}
+
+/** Declaration Of Variable ***************************************************************************************/
+:root{
+    --primary-color-grey:#e3e6ed;
+    --primary-color-blue: #0b7ae9;
+    --column-gutter:40px;
+}
+
+/** Reusable Components *******************************************************************************************/
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.row [class^="col-"]{
+    float: left;
+}
+
+.row [class^=col-]:not(:last-child){
+    margin-right: 40px;
+}
+
+
+.row .col-1-of-2{
+    width: calc((100% - var(--column-gutter))/2);
+}
+
+.row .col-1-of-3{
+    width: calc((100% - 2 * var(--column-gutter))/3);
+}
+
+.row .col-1-of-4{
+    width: calc((100% - 3 * var(--column-gutter))/4);
+}
+
+/** Headings *****************************************************************************************************/
+.section-heading{
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+h1::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--primary-color-blue);
+    margin: 10px 0;
+    margin: 0 auto;
+}
+
+/** Utility Classes **********************************************************************************************/
+.u-text-align{text-align: center;}
+.u-margin-bootom-md{margin-bottom: 40px;}
+
+
+/** Position Section **********************************************************************************************/
+
+
+.image-container{
+    background-color: var(--primary-color-blue);
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+.image-container img{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100%;
+    height: 350px; 
+    object-fit: cover;   
+}
+
+.about-image-container img{
+    left: 20px;
+}
+
+.view-image-container img{
+    left: 20px;
+}
+
+
+/** Button ********************************************************************************************************/
+.btn{
+    background-color: var(--primary-color-blue);
+    padding: 7px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+    color: #fff;
+    border: 2px solid transparent;
+}
+
+.btn:hover{
+    background-color: transparent;
+    border-color: var(--primary-color-blue);
+    color: var(--primary-color-blue);
+}
+
+/** Header Section ************************************************************************************************/
+.header{
+    background-color: #e3e6ed;
+    padding-bottom: 100px;
+    
+}
+
+/** Navigation Section ********************************************************************************************/
+.nav-container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.nav-contents-menus{
+    padding: 20px 0;
+}
+
+.nav-contents-menus::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.left-nav-content{
+    float: left;
+}
+
+.right-nav-contents{
+    float: right;
+}
+
+.brand{
+    color: var(--primary-color-blue);
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.nav-lists{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.nav-items{
+    float: left;
+    padding-left: 20px;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.nav-links{
+    text-decoration: none;
+    color: #000;
+    transition: all .3s;
+}
+
+.nav-links:hover{
+    color: var(--primary-color-blue);
+}
+
+.mobile-nav-icon{
+    display: none;
+    position: absolute;
+    right: 30px;
+    font-size: 24px;
+    top: 20px;
+}
+
+/** Hero Section **************************************************************************************************/
+.hero{
+    padding-top: 90px;
+}
+
+.hero-heading{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.hero-search-bar{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input{
+    padding: 7px 20px;
+}
+
+input:focus{
+    outline: none;
+    border-color: var(--primary-color-blue);
+}
+
+
+/** About Section *************************************************************************************************/
+.section-about{
+    padding: 100px 0;
+}
+
+.about-textbox{
+    padding: 0 40px;
+}
+
+.about-para1{
+    margin: 20px 0;}
+
+.about-para2{
+    margin-bottom: 35px;
+}
+
+/** Services Section **********************************************************************************************/
+.section-services{
+    padding: 100px 0;
+    background-color: var(--primary-color-grey);
+}
+
+.services-contents{
+    margin-bottom: 10px;
+}
+
+.services-contents::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.services-icon-circle{
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: var(--primary-color-blue);  
+    text-align: center;
+}
+
+.services-icon{
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.services-textbox{
+    float: right;
+    width: 80%;
+    
+}
+
+.services-sub-heading{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/** View Our Work Section ***********************************************************************************************************/
+.section-view{
+    padding: 100px 0;
+}
+
+.section-container{
+    margin-top: 100px;
+}
+
+.view-contents::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.view-contents{
+    margin-bottom: 30px;
+}
+
+.view-icon-circle{
+    float: left; 
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: var(--primary-color-blue);  
+    text-align: center;
+} 
+
+.view-textbox{
+    float: right;
+    width: 80%;
+}
+
+.view-icon{
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.view-sub-heading{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/** Galaxy Section ***************************************************************************************************************/
+.section-galaxy{
+    background-color: var(--primary-color-grey);
+    padding: 100px 0;
+    
+}
+
+.galaxy-image-container{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.galaxy-image-container img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/** Why Choose Us Section *******************************************************************************************************************/
+.section-why-choose-us{
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.why-choose-us-para1{
+    margin: 20px 0;
+}
+
+.why-choose-us-contents{
+    margin-bottom: 20px;
+}
+
+.why-choose-us-contents::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.why-choose-us-icon-circle{
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: var(--primary-color-blue);  
+    text-align: center;
+}
+
+.why-choose-us-icon{
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.why-choose-us-textbox{
+    float: right;
+    width: 87%;
+}
+
+.why-choose-us-sub-heading{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/** Testimonies Section *******************************************************************************************************************/
+.section-testimonies{
+    background-color: var(--primary-color-grey);
+    padding: 100px 0;
+}
+.Video-container{
+    background-color: var(--primary-color-blue);
+    width: 50%;
+    height: 350px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    transform: translate(-50%);
+    text-align: right;    
+}
+
+.Video-container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;   
+    object-fit: cover; 
+}
+
+.video-circle{
+height: 50px; 
+width: 50px; 
+border-radius: 100%; 
+background-color: rgb(21, 126, 224); 
+position: absolute; 
+top:50%; 
+left: 50%; 
+transform: translate(-50%, -50%);
+text-align: center;
+cursor: pointer;
+}
+
+.video-icon{
+    color: #fff;
+    font-size: 15px;
+    line-height: 50px;
+
+}
+
+.testimonies-textbox h1{
+    margin: 70px 0;
+}
+
+.testimonies-contents-container{
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.testimonies-content-name{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/** Footer Section *******************************************************************************************************************/
+.section-footer{
+    height: 70px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.section-footer span{
+    font-size: 12px;
+
+}
+
+
+
+/*Media query for device width less or equal to 900px (Tablet, ipad) */ 
+@media screen and (max-width: 900px){
+    .row {
+        max-width: 450px;
+    }
+
+    .row [class^="col-"] {
+        float: none;
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 50px;
+    }
+
+    .mobile-nav-icon{
+        display: block;
+    }
+
+    .right-nav-contents{
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        left: -316px;
+        top: 54px;
+        padding: 40px;
+        width: 300px;
+        transition: all .3s;
+    }
+
+    .nav-items {
+        float: none;
+        padding-left: 0;
+        margin-bottom: 15px;
+    }
+
+   
+}
+
+@media screen and (max-width: 480px){
+    .row{
+        padding: 0 28px;
+    }
+
+
+    .services-contents {
+        text-align: center;
+    }
+    .services-icon-circle {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .services-textbox {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .view-icon-circle {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .view-textbox {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .view-contents {
+        text-align: center;
+    }
+
+    .why-choose-us-contents {
+        text-align: center;
+    }
+
+    .why-choose-us-icon-circle {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .why-choose-us-textbox {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
